@@ -1,0 +1,47 @@
+#canvas {
+  margin: auto;
+  width: 607px;
+  height: 607px;
+  border: 1px solid gray;
+  background-color: black; }
+#canvas #windiv {
+	display: none; }
+#canvas #windiv img{width:607px;}
+#canvas .banner {
+	width: 370px;
+	font-size: 50px;
+	background-color: #f5f5dc;
+	position: relative;
+	text-align: center;
+	top: -60px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.55);
+	left: -15px;
+	z-index: 2; }
+#canvas .innerSquare {
+	width: 200px;
+	height: 200px;
+	background-size: 607px;
+	float: left; }
+#canvas .innerSquare.imageSquare {
+	font-size: 24px;
+	text-align: center;
+	border: 1px outset  black; }
+#canvas .innerSquare.imageSquare:hover {
+	background-color: lightgray; }
+#canvas .innerSquare.clickable:hover {
+	opacity: 0.4;
+	filter: alpha(opacity=40); }
+#canvas .innerSquare.blank {
+	border: 1px inset black; }
+
+#previews {
+  height: 100px;
+  background-color: lightgrey;
+  overflow: scroll;
+  padding-left: 30px;
+  margin-top: 10px; }
+#previews .mini {
+	width: 90px;
+	height: 90px;
+	margin-top: 5px;
+	margin-right: 5px; }
