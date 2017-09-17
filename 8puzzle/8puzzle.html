@@ -9,6 +9,19 @@
 	<main>
 		<div id="canvas"></div>
 		<div id="previews"></div>
+		<div id="puzzle-buttons">
+			<button class="button" id="undo" title="Undo the last move">Undo</button>
+			<button class="button" id="restart" title="Return puzzle to starting position">Restart</button>
+			<button class="button" id="solve" title="Show a solution to the puzzle">Solve</button>		
+
+			<select id="puzzle-difficulty">
+				<optgroup label="Puzzle Difficulty">
+					<option value="6" label="Easy (6 moves)">Easy</option>
+					<option value="12"label="Medium (12 moves)" selected>Tricker</option>
+					<option value="24" label="Too Hard (24 moves)">Hard</option>
+				</optgroup>
+			</select>
+		</div>
 	</main>
 
 <script type='text/javascript' src='https://www.inkston.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>

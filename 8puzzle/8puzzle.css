@@ -4,8 +4,7 @@
   height: 607px;
   border: 1px solid gray;
   background-color: black; }
-#canvas #windiv {
-	display: none; }
+#canvas #windiv {display:none;}
 #canvas #windiv img{width:607px;}
 #canvas .banner {
 	width: 370px;
@@ -21,16 +20,24 @@
 	width: 200px;
 	height: 200px;
 	background-size: 607px;
-	float: left; }
+	float: left; 
+	/*TODO: transition on moving tiles
+	transition:all 2s ease-in;
+	*/
+}
 #canvas .innerSquare.imageSquare {
 	font-size: 24px;
 	text-align: center;
+	cursor: no-drop;
 	border: 1px outset  black; }
 #canvas .innerSquare.imageSquare:hover {
 	background-color: lightgray; }
 #canvas .innerSquare.clickable:hover {
-	opacity: 0.4;
-	filter: alpha(opacity=40); }
+	transition:0.5s ease-out;
+	transform:translate3d(3px, -3px, -10px) scale(1.05);
+	filter:saturate(150%) brightness(110%);
+	cursor: pointer;
+}
 #canvas .innerSquare.blank {
 	border: 1px inset black; }
 
@@ -45,3 +52,11 @@
 	height: 90px;
 	margin-top: 5px;
 	margin-right: 5px; }
+
+
+.button:disabled,
+button:disabled,
+button[disabled]{
+	opacity: 0.65; 
+	cursor: not-allowed;
+}
