@@ -35,8 +35,10 @@ function gallery_puzzle_shortcode($attr)
         //error_log($output);
         preg_match_all('/src=(\".+?\")/', $output, $matches);
 
-        wp_enqueue_style('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle.css'));
-        wp_enqueue_script('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle.js'), array(), '15072017', true);
+        $suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+        wp_enqueue_style('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle' . $suffix . '.css'));
+        wp_enqueue_script('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle' . $suffix . '.js'), 
+            array(), '18092017', true);
         
         $puzzle = '<main><div id="puzzle-buttons">
 <button class="button" id="undo" title="Undo the last move">Undo</button>
