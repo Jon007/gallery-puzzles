@@ -144,7 +144,7 @@
 				//same switching function as used for user interaction, with display update suppressed
 				this.switchTwo(randomNum, this.blankSquare, true);
 				//break out of loop once identified suitable number of moves
-				if (this.moves.length > numMoves){break;} 
+				if (this.moves.length >= numMoves){break;} 
 			}
 			this.startMove = this.moves.length -1;
 			//moves were done without rendering so render all now
@@ -227,6 +227,10 @@
 				} else {
 					btnSolve.removeAttribute("disabled")
 				}
+			}
+			spnMove = jQuery('#puzzle-move');
+			if (spnMove){
+				spnMove.text('Moves made: ' + Math.abs(this.moves.length - this.startMove -1));
 			}
 		}
 

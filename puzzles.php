@@ -32,13 +32,27 @@ function gallery_puzzle_shortcode($attr)
     if (isset($attr['puzzle'])){
         //find src attributes within normal shortcode output
         $matches = [];
-        error_log($output);
+        //error_log($output);
         preg_match_all('/src=(\".+?\")/', $output, $matches);
 
         wp_enqueue_style('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle.css'));
         wp_enqueue_script('picpuzzle', plugins_url('/gallery-puzzles/8puzzle/8puzzle.js'), array(), '15072017', true);
         
-        $puzzle = '<main><div id="canvas"></div><div id="previews"></div></main>';
+        $puzzle = '<main><div id="puzzle-buttons">
+<button class="button" id="undo" title="Undo the last move">Undo</button>
+<button class="button" id="solve" title="Show a solution to the puzzle">Solve</button>		
+<button class="button" id="restart" title="Return puzzle to starting position">Restart</button>
+<select id="puzzle-difficulty">
+    <optgroup label="Puzzle Difficulty">
+        <option value="6"  label="Easy (6 moves)">Easy</option>
+        <option value="12" label="Tricky (12 moves)" selected>Tricker</option>
+        <option value="24" label="Hard (24 moves)">Hard</option>
+    </optgroup>
+</select>
+<span id="puzzle-move"></span>
+</div>
+<div id="canvas"></div><div id="previews"></div>
+</main>';
         if (sizeof($matches[1]) > 0){
             $puzzle .= '<script>window.puzzlepics=[' . implode(',', $matches[1]) . ']</script>';
         }
