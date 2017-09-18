@@ -3,7 +3,7 @@ Contributors: jonathanmoorebcsorg
 Donate link: http://paypal.me/jonathanmoorebcsorg
 Tags: buddypress, bbPress
 Requires at least: 4.7
-Tested up to: 4.8
+Tested up to: 4.8.1
 Stable tag: trunk
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
@@ -39,6 +39,9 @@ There aren't any yet
 1. coming soon
 
 == Changelog ==
+
+= 0.2 =
+(2017/09/18) 8puzzle Added move history, undo, solve, restructure and bugfixes.
 
 = 0.1 =
 (2017/07/18) Initial draft.
