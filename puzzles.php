@@ -11,10 +11,10 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Turn any gallery into a puzzle!
  * Contributors: jonathanmoorebcsorg
- * Version: 0.1
- * Stable Tag: 0.1
+ * Version: 0.2
+ * Stable Tag: 0.2
  * Requires At Least: 4.7
- * Tested Up To: 4.8
+ * Tested Up To: 4.8.1
  */
 
 function gallery_puzzle_shortcode($attr)
